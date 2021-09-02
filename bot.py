@@ -367,9 +367,11 @@ async def button(bot: Client, cmd: CallbackQuery):
                 user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), cmd.message.chat.id)
                 if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/AnkiSupport_Official).",
+                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/arifrozex21).",
                         parse_mode="markdown",
-                        disable_web_page_preview=True
+                        disable_web_page_preview=True)
+                    share_link = f"https://t.me/{Config.BOT_USERNAME}?start=ankivectorUpdates_{file_er_id}"
+                    
                     )
                     return
             except UserNotParticipant:
